@@ -37,17 +37,20 @@
                                         <div class="card-image">
                                             <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="...">
                                         </div>
+                                         
                                         <form method="POST" action="{% url 'login_user' %}">
                                             {% csrf_token %}
                                             <div class="card-body">
                                             <div class="author">
                                                 <a href="#">   <p><img id="output" class="avatar border-gray" width="200" /></p>
-                                                    
+                                                <!-- Alerts -->
+                                                {% include 'dashboard/_alerts.html' %}
                                                     <h5 class="title">New User</h5>
                                                 </a>
                                                 <div class="row d-flex justify-content-center">
                                                     <div class="col-md-8 pr-1">
                                                         <div class="form-group">
+                                                           
                                                             <label>User Name</label>
                                                             <input name="username" type="text" class="form-control" placeholder="Username" value="">
                                                         </div>

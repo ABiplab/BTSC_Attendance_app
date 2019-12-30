@@ -1,5 +1,12 @@
+from django.utils import timezone
 
 from django.db import models
-class User(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+class Attendance(models.Model):
+    name= models.CharField(max_length=150)  
+    In_time = models.DateTimeField()
+    Out_time = models.DateTimeField()
+    currentdate= models.DateField()
+    locationn=models.CharField(max_length=150) 
+    def __str__(self):
+        return self.name
+    list_filter =('name')

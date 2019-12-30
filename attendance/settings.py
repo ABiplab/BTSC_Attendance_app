@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'easy_maps',
+    
 ]
 
 MIDDLEWARE = [
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -129,6 +129,14 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'attendance/static')
 ]
 EASY_MAPS_GOOGLE_KEY = 'AIzaSyAWGMb98LZs933quYf9SsnAuHOUA9ca7NI'
+
 # Media folder ssetting
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+# Message
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'Bhak bhosdi wale',
+    50: 'critical',
+}
